@@ -6,5 +6,9 @@ public class BSTMain {
 
         System.out.println("Welcome to Binary Search Tree Data Structure!");
 
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.insert(56);
+        tree.insert(30);
+        tree.insert(70);
     }
 }
