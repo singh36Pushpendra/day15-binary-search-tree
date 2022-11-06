@@ -52,4 +52,29 @@ public class BinarySearchTree<T extends Comparable<T>> {
     int size() {
         return count;
     }
+
+    boolean search(T input) {
+        return ifNodeExists(root, input);
+    }
+    boolean ifNodeExists( Node root, T input)
+    {
+        if (root == null)
+            return false;
+
+        if (root.key.equals(input))
+            return true;
+
+        // then recur on left subtree /
+        boolean res1 = ifNodeExists(root.left, input);
+
+        // node found, no need to look further
+        if(res1==true) return true;
+
+        // node is not found in left,
+        // so recur on right subtree /
+        boolean res2 = ifNodeExists(root.right, input);
+
+        return res2;
+    }
+
 }

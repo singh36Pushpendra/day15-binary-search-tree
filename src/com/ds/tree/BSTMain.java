@@ -22,5 +22,6 @@ public class BSTMain {
         tree.insert(67);
 
         System.out.println("Size of tree: " + tree.size());
+        System.out.println("Searching 63 in tree present? : " + tree.search(63));
     }
 }
