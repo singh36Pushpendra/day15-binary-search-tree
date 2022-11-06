@@ -3,6 +3,7 @@ package com.ds.tree;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 
+    private int count;
     /*
      * Class containing left and right child of current node and key value
      */
@@ -21,7 +22,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     // This method mainly calls insertToTree()
     void insert(T key) {
+
         root = insertToTree(root, key);
+        count++;
     }
 
     /*
@@ -46,4 +49,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return root;
     }
 
+    int size() {
+        return count;
+    }
 }
